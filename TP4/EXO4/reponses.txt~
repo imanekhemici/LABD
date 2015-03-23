@@ -1,0 +1,14 @@
+Question 2 : 
+
+//* affiche tout les elements de notre fichier.
+
+//nom n'affiche aucun element.
+
+
+personnes n'est pas prefixé donc on ne peut pas acceder à l'element nom avec //nom.
+
+
+
+Question 3 :
+
+p:  http://www.fil.univ-lille1.fr/labd

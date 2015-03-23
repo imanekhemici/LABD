@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:a="http://www.a.com" xmlns:b="http://www.b.com" targetNamespace="http://www.a.com">
+
+<import namespace="http://www.b.com" schemaLocation="file:///home/m1/khemici/Bureau/s2/LABD/TP4/EXO3/b.xsd" />
+
+<element name="A">
+
+	<complexType>
+      		<sequence>
+       			 <element ref="b:B" />
+    		  </sequence>
+    	</complexType>
+
+</element>
+</schema>

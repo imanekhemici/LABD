@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://xml.insee.fr/schema"
+	xmlns:individu=" http://xml.insee.fr/schema/individu.html"  
+	targetNamespace="http://xml.insee.fr/schema"
+>
+
+<xs:import namespace= "http://xml.insee.fr/schema/individu.html" schemaLocation="http://xml.insee.fr/schema/individu.xsd"/>
+
+
+<xs:complexType name="livreDeFamille">
+	<xs:sequence>
+		<xs:element name="nomHomme" type="individu:NomDeFamilleSeulType" />
+		<xs:element name="nomFemme" type="individu:NomDeFamilleSeulType" />
+		<xs:element name="datelieunaissancehomme" type="individu:NaissanceType" />
+		<xs:element name="datelieunaissancefemme" type="individu:NaissanceType" />
+		<xs:element name="datelieuacte" type="individu:NaissanceType" />
+		
+		<xs:element name="EnfantCommun">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="DateLieunaissance" type="individu:NaissanceType"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element> 
+		<xs:element name="EnfantMort">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="DateLieuMort" type="individu:DecesType"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="deceeParentEpoux">
+			<xs:complexType>
+			
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="1">
+					<xs:element name="DecesParent" type="xs:string"/>
+					<xs:element name="DecesEpoux" type="xs:string"/>
+				</xs:choice>
+					<xs:element name="DateLieuMort" type="individu:DecesType"/>
+				</xs:sequence>
+			</xs:complexType>
+		
+		
+		</xs:element>
+	
+	</xs:sequence>
+
+</xs:complexType>
+
+
+
+<xs:element name="livret" type="livretDeFamille "/>
+
+</xs:schema>

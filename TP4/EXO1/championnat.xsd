@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<xsd:element name="local" type="xsd:string"/>
+<xsd:element name="visiteur" type="xsd:string"/>
+<xsd:element name="score" type="xsd:string"/>
+
+
+<xsd:element name="rencontre">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="local"/>
+			<xsd:element ref="visiteur"/>
+			<xsd:element ref="score"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="journee">
+	<xsd:complexType>
+		<xsd:choice  minOccurs="10" maxOccurs="10">
+			<xsd:element ref="rencontre"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:string"/>
+		<xsd:attribute name="date" type="xsd:date"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="aller">
+	<xsd:complexType>
+		<xsd:choice minOccurs="19" maxOccurs="19">
+			<xsd:element ref="journee"/>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="retour">
+	<xsd:complexType>
+		<xsd:choice minOccurs="19" maxOccurs="19">
+			<xsd:element ref="journee"/>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="club">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="nomlong" type="xsd:string"/>
+			</xsd:sequence>
+					
+	</xsd:complexType>
+</xsd:element>
+
+	<xsd:complexType name="ClubsType">
+		<xsd:sequence>
+			<xsd:choice minOccurs="20" maxOccurs="20">
+				<xsd:element ref="club"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+<xsd:element name="clubs" type="ClubsType">
+<xsd:key  name="nomcourt">
+			<xsd:selector xpath="club"/>
+			<xsd:field xpath="@string"/>
+		</xsd:key>
+</xsd:element>		
+
+
+<xsd:element name="journees">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="aller"/>
+			<xsd:element  ref="retour"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="championnat">
+	<xsd:complexType>
+		<xsd:sequence>
+				<xsd:element ref="clubs"/>
+				<xsd:element ref="journees"/>
+		</xsd:sequence>	
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>
