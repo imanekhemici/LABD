@@ -1,0 +1,17 @@
+a1 est validé par d1.dtd seulement.
+
+On A donne au minimum soit un B soit un D, et dans le a1 il donne un B.
+ensuite il donne un F a la fin.
+
+dans notre d1.dtd, le B donne un C*, dans le a1 il donne 2 C.
+C donne une valeur, dans le a1 il donne 3
+et F aussi.
+
+Ma reponse a été confirmé par l'utilisation de Editix.
+
+a2 est validé par d1.dtd, d2.dtd, d3.dtd 
+
+Chaque dtd donne a2, et ça été confimer par Editix.
+
+a3 est validé par d2.dtd seulement.
+

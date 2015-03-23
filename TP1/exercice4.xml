@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML Document created with EditiX at Tue Jan 20 16:25:46 CET 2015 -->
+
+<!-- Please set your XML Form Path (*.exf) before using the visual editor -->
+
+<?xmlform 'YOUR_FORM_PATH'?>
+
+
+<!DOCTYPE itineraire SYSTEM "exercice4.dtd">
+<itineraire>
+     <description>
+	<depart>Seclin-Centre hospitalier</depart>
+	<arrive> Roubaix- Avenue Motte</arrive>
+	<date>Mardi 22 janvier</date>		
+	<heure>
+		<h>12h</h>
+		<mn>35</mn>
+	</heure>
+
+	<modechoix>Metro-Tramway-Bus-Car</modechoix>	
+	<preference>Arriver le plus rapidement</preference>
+	<vitesse>Normale</vitesse>
+	<temps>
+	<h>1</h>
+	<mn>27</mn>
+	</temps>
+
+     </description>
+	
+     <crenaux>
+     
+     <crenau>
+     <depart>Seclin-Centre hospitalier</depart>
+     <arrive>Seclin-Hotel de ville</arrive>
+     <mode ligne ='' societe="">à pied</mode>
+     <duree>
+     <mn>13</mn>
+     </duree>
+     </crenau>
+     
+     <crenau>
+     <heure>
+     <h>14h</h>
+     <mn>51</mn>
+     </heure>
+     <mode ligne='52' societe='transpole'>
+     	Bus
+     </mode>
+     <direction>
+     	Lille-Porte des Postes
+     </direction>
+     <duree>
+     <mn>23</mn>
+     </duree>
+     </crenau>
+     
+     <crenau>
+     <heure>
+     <h>15</h>
+     <mn>14</mn>
+     </heure>
+
+	<arrive>Lille-CHR B Calmette</arrive>
+	
+     </crenau>
+     
+     <attente>
+	<mn>4</mn>
+      </attente>
+      
+      <crenau>
+      <heure>
+      	<h>15</h>
+	<mn>18</mn>
+      </heure>
+      <mode ligne='1' societe ='transpole'>
+      Metro
+      </mode>
+      <direction>
+      Villeneuve d'Ascq- 4 Cantons Grand Stade
+      </direction>
+      <duree>
+      <mn>3</mn>
+      </duree>
+      </crenau>
+	
+     <crenau>
+     <heure>
+     <h>15h</h>
+     <mn>21</mn>
+     </heure>
+     <arrive>
+     Lille-Porte des Postes
+     </arrive>
+     </crenau>
+     
+     <attente>
+     <mn>6</mn>
+     </attente>
+     
+     <crenau>
+     <heure>
+     <h>15h</h>
+     <mn>27</mn>
+     </heure>
+     <mode ligne ='2' societe='transpole'>
+     Metro
+     </mode>
+     <direction>
+     Tourcoing- CH Dron
+     </direction>
+
+	<duree>
+	<mn>25</mn>
+	</duree>     
+     </crenau>
+     
+     <crenau>
+     <heure>
+     <h>15h</h>
+     <mn>52</mn>
+     </heure>
+     <arrive>
+     Roubaix- Epeule Montesquieu
+     </arrive>
+     </crenau>
+     
+     <attente>
+     <mn>4</mn>
+     </attente>
+     
+     <crenau>
+     	<heure>
+     		<h>15h</h>
+    		 <mn>56</mn>
+     	</heure>
+     	<mode ligne='25'  societe='transpole'>Bus</mode>
+     	<direction>Roubaix- fraternite</direction>
+     	<duree><mn>9</mn></duree>
+     </crenau>
+     
+     <crenau>
+   	<heure>
+     		<h>16h</h>
+    		 <mn>05</mn>
+	</heure>
+     	<arrive>Roubaix-Avenue Motte</arrive>
+
+     </crenau>
+     
+     </crenaux>	
+</itineraire>

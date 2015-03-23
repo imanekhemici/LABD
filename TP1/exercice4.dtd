@@ -1,0 +1,23 @@
+<!-- DTD created at Wed Jan 21 10:21:36 CET 2015 with EditiX. Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT itineraire (description,crenaux)>
+<!ELEMENT description (depart,arrive,date,heure,modechoix,preference,vitesse,temps)>
+<!ELEMENT crenaux ((crenau|attente)+)>
+<!ELEMENT depart (#PCDATA)>
+<!ELEMENT arrive (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT heure (h,mn)>
+<!ELEMENT modechoix (#PCDATA)>
+<!ELEMENT h (#PCDATA)>
+<!ELEMENT mn (#PCDATA)>
+<!ELEMENT crenau ((depart|arrive|mode|duree|direction|heure)*)>
+<!ELEMENT attente ((h|mn)*)>
+<!ELEMENT duree ((h|mn)*)>
+<!ELEMENT direction (#PCDATA)>
+<!ELEMENT mode (#PCDATA)>
+	<!ATTLIST mode 
+	ligne CDATA #IMPLIED
+	societe CDATA #IMPLIED> 
+<!ELEMENT preference (#PCDATA)>
+<!ELEMENT vitesse (#PCDATA)>
+<!ELEMENT temps (h,mn)>

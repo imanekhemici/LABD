@@ -1,0 +1,5 @@
+MImane KHEMICI
+Groupe 01
+
+Pour l'exercice 5, j'ai eu des difficutés pour trouver un dtd correcte qui pourra valider notre fichier maison.xml et en meme temps qui pourra etre logique par rapport a la realité.
+Le fichier dtd est tres limité par exemple si on a dans une partie <h> avant <c>, et dans une autre partie <c> avant <h>, on pourra pas valider notre fichier facilement.
